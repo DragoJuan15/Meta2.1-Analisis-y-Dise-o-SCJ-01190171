@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="857.0" prefWidth="839.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.meta1_1.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label fx:id="welcomeText" />
+   <HBox prefHeight="100.0" prefWidth="200.0">
+      <children>
+         <VBox prefHeight="100.0" prefWidth="400.0">
+            <children>
+               <TextField fx:id="texto1" promptText="texto1" />
+               <TextField fx:id="texto2" promptText="texto2" />
+               <TextField fx:id="texto3" promptText="texto3" />
+            </children>
+         </VBox>
+         <ComboBox fx:id="tipoDeTabla" prefWidth="150.0" />
+         <VBox prefHeight="102.0" prefWidth="103.0">
+            <children>
+               <Button mnemonicParsing="false" onAction="#crearElemento" prefHeight="25.0" prefWidth="106.0" text="Crear" />
+               <Button mnemonicParsing="false" onAction="#leerElemento" prefHeight="25.0" prefWidth="106.0" text="Leer" />
+               <Button mnemonicParsing="false" onAction="#sobreescribirElemento" prefHeight="25.0" prefWidth="105.0" text="Actualizar" />
+               <Button mnemonicParsing="false" onAction="#eliminarElemento" prefHeight="25.0" prefWidth="106.0" text="Borrar" />
+            </children>
+         </VBox>
+         <ComboBox fx:id="tipoDeVehiculo" prefWidth="150.0" />
+      </children></HBox>
+    <Button onAction="#onHelloButtonClick" text="Hello!" />
+    <TableView fx:id="direcciones" prefHeight="161.0" prefWidth="799.0">
+        <columns>
+            <TableColumn fx:id="colDireccionId" prefWidth="122.0" text="ID" />
+            <TableColumn fx:id="colDireccionNombre" prefWidth="394.0" text="Nombre" />
+            <TableColumn fx:id="colDireccionDireccion" prefWidth="267.0" text="Dirección" />
+        </columns>
+    </TableView>
+
+    <TableView fx:id="telefonos" prefHeight="204.0" prefWidth="799.0">
+        <columns>
+            <TableColumn fx:id="colTelefonoId" prefWidth="123.0" text="ID" />
+            <TableColumn fx:id="colTelefonoNumero" prefWidth="391.0" text="Número" />
+            <TableColumn fx:id="colTelefonoIdPersona" prefWidth="205.0" text="ID Persona" />
+        </columns>
+    </TableView>
+   <TableView fx:id="vehiculos" prefHeight="200.0" prefWidth="200.0">
+     <columns>
+       <TableColumn fx:id="colVehiculoId" prefWidth="138.19999885559082" text="ID" />
+       <TableColumn fx:id="colVehiculoTipoDeVehiculo" prefWidth="188.40000915527344" text="Tipo de vehiculo" />
+         <TableColumn fx:id="colVehiculoMarca" prefWidth="232.0" text="Marca del vehiculo" />
+         <TableColumn fx:id="colVehiculoNumeroDeLlantas" prefWidth="128.0" text="Numero de llantas" />
+         <TableColumn fx:id="colVehiculoIdPersona" prefWidth="116.0" text="ID Persona" />
+     </columns>
+   </TableView>
+</VBox>
